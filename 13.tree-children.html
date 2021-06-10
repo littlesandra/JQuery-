@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <ul class="level1">
+                <li class="item-1">item1</li>
+                <li class="item-2">item2</li>
+                <ul class="level2">
+                    <li class="item-01">item01</li>
+                    <li class="item-02">item02</li>
+                    <ul class="level3">
+                        <li class="item001">item001</li>
+                        <li class="item002">item002</li>
+                        <li class="item003">item003</li>
+                    </ul>
+                    <li class="item-03">item03</li>
+                </ul>
+                <li class="item-3">item3</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        // $('.level1').children().css('border', '1px solid #ccc');
+        $('.level1').find('.item002').css('border', '1px solid #ccc');
+    </script>
+</body>
+
+</html>

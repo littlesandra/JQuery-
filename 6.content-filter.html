@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="names">Jason Kidd</div>
+    <div class="names">LeBron James</div>
+    <div class="names">Jason Williams</div>
+    <div class="names">James Harden</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $("div.names:contains('Jason')").css("background", "yellow");
+        // 字串規則，我們用單引號或雙引號來代表一個字串，需錯開使用避免電腦混淆
+        // 字串：我們特別指定這一串字給 JS/JQ程式
+    </script>
+</body>
+
+</html>
