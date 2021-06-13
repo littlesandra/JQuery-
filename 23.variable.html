@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Hoist 提升，因為順序很重要，所以ES6特別強調
+        // 必須先宣告，才能開始使用這個變數
+        console.log(x);
+        // -undefined
+        console.log(a);
+        // error
+
+        // ES5 變數宣告是用 var來宣告
+        var X = 10;
+        var y = 20;
+
+        // ES6 宣告變數從 var 分解成兩個：1.let 2.const
+        let a = 10;
+        const b = 20;
+
+        // let（可重新賦值） VS  const（不可重新賦值）
+        a = 11;
+        // b = 21;
+
+        // JavaScript 是一個弱型態的語言
+        // 簡單資料的型態有三種：1.字串 2.數字 3.布林值（true/false）
+        // 寫程式的時候，害怕型態被改變造成 bug，這種情況下我們會使用const
+        // 除非這個變數會一直改變，需要重新賦值，那只好用let宣告
+
+        // 還有兩種常用的資料型態
+        // 陣列 Array 跟物件 Object，來儲存更多的資訊
+    </script>
+</body>
+
+</html>

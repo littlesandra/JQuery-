@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+    <button class="btn btn-primary">button</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        // 快速點擊兩次，實際上會觸發兩次 click 跟一次 dbclick
+        $('.btn').click(function () {
+            console.log('click');
+        });
+
+        $('.btn').dblclick(function () {
+            console.log('dblclick');
+        });
+
+        // 單純的執行一次命令，無法再次呼叫
+        // 如果想重複執行，需要包在一個 function 裡面
+        console.log('dblclick');
+
+        // 綁定監聽器的機制，到底是怎麼運作的？
+        $('.btn').click(function () {
+            console.log('click2');
+
+            $('.btn').contextmenu(function () {
+                console.log('contextmenu');
+            });
+        });
+
+        console.log('dblclick3');
+
+        // coding style
+        // airbnb 推崇不加分號當結尾
+        $('.btn').mousedown(function () {
+            console.log('mousedown');
+        });
+
+        $('.btn').mouseup(function () {
+            console.log('mouseup');
+        });
+
+        $('.btn').mouseenter(function () {
+            console.log('mouseenter');
+            $(this).css('background-color', 'red');
+        });
+
+        $('.btn').mouseleave(function () {
+            console.log('mouseleave');
+            $(this).css('background-color', '#007bff');
+        });
+
+        $('.btn').hover(function () {
+            console.log('hover in');
+        }, function () {
+            console.log('hover leave');
+        });
+    </script>
+</body>
+
+</html>

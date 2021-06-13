@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <table class="table table-bordered">
-                <tr class="tr1">
+                <tr class="tr">
                     <td>
                         <input type="checkbox">
                     </td>
@@ -24,7 +24,7 @@
                     <td>mikeurbusiness@gmail.com</td>
                 </tr>
 
-                <tr class="tr2">
+                <tr class="tr">
                     <td>
                         <input type="checkbox">
                     </td>
@@ -33,7 +33,7 @@
                     <td>monicachen@gmail.com</td>
                 </tr>
 
-                <tr class="tr3">
+                <tr class="tr">
                     <td>
                         <input type="checkbox">
                     </td>
@@ -42,7 +42,7 @@
                     <td>andywannafly@gmail.com</td>
                 </tr>
 
-                <tr class="tr4">
+                <tr class="tr">
                     <td>
                         <input type="checkbox">
                     </td>
@@ -62,7 +62,7 @@
         // $(':checked + tr').css('background-color', 'blue')
         $('input').click(function () {
             console.log('check', $(this));
-            $(this).css('background-color', 'blue');
+            $(this).parent().parent().css('background-color', 'lightblue');
         })
 
     </script>
