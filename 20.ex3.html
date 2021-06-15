@@ -13,7 +13,7 @@
             border-radius: 50%;
             margin: 5px;
             border-radius: 50%;
-            border-style: dotted;
+            border: 3px solid transparent;
         }
     </style>
 </head>
@@ -31,14 +31,40 @@
         </div>
     </div>
 
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="./imgs/person1.jpg" alt="">
+            </div>
+            <div class="col">
+                <img src="./imgs/person2.jpg" alt="">
+            </div>
+            <div class="col">
+                <img src="./imgs/person3.jpg" alt="">
+            </div>
+            <div class="col">
+                <img src="./imgs/person4.jpg" alt="">
+            </div>
+            <div class="col">
+                <img src="./imgs/person5.jpg" alt="">
+            </div>
+        </div>
+    </div> -->
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         $('img').click(function () {
             console.log('hi', $(this));
-            $(this).css('border-color', 'red');
-            $('img').not($(this)).css('border-color', 'black');
+            $(this).css('border', '3px solid red');
+            $('img').not($(this)).css('border', '3px solid transparent');
         });
+
+        // $('img').click(function () {
+        //     console.log('hi', $(this));
+        //     $(this).css('border', '3px solid red').parent()
+        //         .siblings().children().css('border', '3px solid transparent');
+        // });
     </script>
 </body>
 

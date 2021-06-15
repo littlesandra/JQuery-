@@ -61,10 +61,40 @@
         // $(':checkbox').click(function () { console.log(); });
         // $(':checked + tr').css('background-color', 'blue')
         $('input').click(function () {
-            console.log('check', $(this));
-            $(this).parent().parent().css('background-color', 'lightblue');
+            // console.log('check', $(this));
+            // $(this).parent().parent().css('background-color', 'lightblue');
+
+
+            //  attr 屬性，看 HTML 上的屬性標籤，通常用在預設
+            // console.log('$(this).attr("checked"):'$(this).attr("checked"));
+            // prop (property) 狀態，判斷現在畫面是否為 checked
+            //  console.log('$(this).prop("checked"):', $(this).prop("checked"));
+
+            // 條件判斷式，只要是 true 就執行大括號裡面的動作
+            // 你必須先找到關鍵判斷的因子是什麼？
+            // 可以讓電腦自動幫你判斷的關鍵
+
+            if ($(this).prop("checked")) {
+                // 改變顏色
+                console.log('true');
+                $(this).closest('tr').css('background-color', 'lightblue');
+            }
+            else {
+                // 變回白色、透明、none
+                console.log('false');
+                $(this).closest('tr').css('background-color', 'transparent');
+
+            }
         })
 
+        // 偷吃步的方法二
+        // $('input').click(function () {
+            // 1.全部的 tr 都改成透明的
+            // $('tr').css('background', 'transparent');
+
+            // 2.把有打勾的 tr 都變成藍色的
+            // $('input:checked').closest('tr').css('background', 'lightblue');
+        // });
     </script>
 
 </body>
