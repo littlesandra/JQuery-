@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        const myArray = [1, 2, 3];
+        //這是錯誤寫法，因為 const 宣告的變數不能重新賦值
+        // myArray=[1, 2, 3, 4];
+        console.log('myArray before', myArray);
+
+        // 從尾端加入一筆新的資料，陣列長度 + 1
+        // myArray.push(4);
+
+        // 從尾端拿最後一個值出來，陣列長度 - 1
+        const myPop = myArray.pop();
+        console.log('myPop', myPop);
+        const myPop2 = myArray.pop();
+        console.log('myPop', myPop2);
+
+        // 從前面加入一筆新的資料，陣列長度 + 1，而且資料的位置會遞移+1
+        myArray.unshift();
+
+        const myShift = myArray.shift();
+        console.log('myArray after', myArray);
+
+    </script>
+</body>
+
+</html>

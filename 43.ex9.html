@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        /* p.active {
+            font-size: 0.5rem;
+        } */
+        .fontS {
+            font-size: .8rem;
+        }
+
+        .fontM {
+            font-size: 1rem;
+        }
+
+        .fontL {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="btn-group">
+                <button class="btn btn-s btn-info" id="addClass">S</button>
+                <button class="btn btn-m btn-info active" id="removeClass">M</button>
+                <button class="btn btn-l btn-info">L</button>
+            </div>
+        </div>
+
+
+        <h2>JQuery</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo architecto quis sit, quibusdam rerum nisi
+            minima earum voluptatibus perferendis aliquid exercitationem accusantium aut nihil, illo, rem id maiores
+            quam
+            nesciunt?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo architecto quis sit, quibusdam rerum nisi
+            minima earum voluptatibus perferendis aliquid exercitationem accusantium aut nihil, illo, rem id maiores
+            quam
+            nesciunt?</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        // 自己做的
+        // $('#addClass').click(function () {
+        //     // console.log('hi');
+        //     $('p').addClass('active');
+        // });
+
+        $('.btn-s').click(function () {
+            // $('p').addClass('fontS');
+            $('p').removeClass().addClass('fontS');
+            $('.btn').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $('.btn-m').click(function () {
+            // $('p').removeClass('fontS fontL');
+            $('p').removeClass().addClass('fontM');
+            $('.btn').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $('.btn-l').click(function () {
+            // $('p').addClass('fontL');
+            $('p').removeClass().addClass('fontL');
+            $('.btn').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+</body>
+
+</html>

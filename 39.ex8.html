@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .wrap {
+            width: 800px;
+            height: 400px;
+            background-color: #ccc;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightpink;
+            position: absolute;
+            top: 0;
+            left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+    </div>
+
+    <div>
+        <div class="py-3 text-center">
+            <div class="py-1">
+                <button id="up" class="btn btn-info">
+                    <i class="fas fa-caret-up"></i>
+                </button>
+            </div>
+
+            <div class="py-1">
+                <button id="left" class="btn btn-info mx-3">
+                    <i class="fas fa-caret-left"></i>
+                </button>
+
+                <button id="right" class="btn btn-info mx-3">
+                    <i class="fas fa-caret-right"></i>
+                </button>
+            </div>
+
+            <div class="py-1">
+                <button id="down" class="btn btn-info">
+                    <i class="fas fa-caret-down"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).on('keydown', function () {
+            // console.log('hi', event);
+
+            if (event.which === 39) {
+                // 代表使用者按了右鍵
+                console.log('right');
+            }
+
+            if (event.which === 37) {
+                // 代表使用者按了左鍵
+                console.log('left');
+            }
+
+            if (event.which === 38) {
+                // 代表使用者按了上鍵
+                console.log('up');
+            }
+
+            if (event.which === 40) {
+                // 代表使用者按了下鍵
+                console.log('down');
+            }
+        });
+
+        const moveRight = {
+            marginLeft: "100px"
+        }
+        $('#left').on('click', function () {
+            $('.box').css(moveRight);
+            moveRight++;
+        });
+    </script>
+</body>
+
+</html>
